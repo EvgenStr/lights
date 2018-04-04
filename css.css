@@ -1,0 +1,24 @@
+div.lamp:nth-child(1){
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+    margin-bottom: 10px; 
+}
+div.lamp:nth-child(2){
+    width: 150px;
+    height: 150px;
+    background:black;
+    border-radius: 50%;
+    margin-bottom: 10px; 
+}
+div.lamp:nth-child(3){
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+}
+
+.lamp{
+    margin: 0px auto;
+}
