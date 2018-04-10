@@ -1,7 +1,5 @@
 function tableGenerator(horizontal, vertical) {
-  if (horizontal - 1 != horizontal - 1 || vertical - 1 != vertical - 1) {
-    console.log("Error");
-  } else {
+  try {
     document.body.innerHTML += "<table></table>";
     document.body.querySelector("table").innerHTML += "<tbody></tbody>";
     var c = document.body.children[0];
@@ -9,16 +7,23 @@ function tableGenerator(horizontal, vertical) {
     for (var i = 0; i < horizontal; i++) {
       document.body.querySelector("tbody").innerHTML += "<tr></tr>";
       for (var j = 0; j < vertical; j++) {
-        g.children[i].innerHTML += "<td></td>";
-      }
-    }
+        g.children[i].innerHTML += "<td></td>";}}
+    if (horizontal - 1 != horizontal - 1 || vertical - 1 != vertical - 1) {
+      throw new Error(message);
+    }}
+   catch (e) {
+    alert("Извините, в данных ошибка");
   }
 }
+
+
+  
+
 function randomColor() {
   var tabl = document.body.children[0].children[0].children;
   //   var td = tabl[0].children;
   console.log(tabl);
-//   console.log(td);
+  //   console.log(td);
   for (var u = 0; u < tabl.length; u++) {
     for (var k = 0; k < tabl[u].children.length; k++) {
       var rand = Math.ceil(Math.random() * 4);
@@ -58,10 +63,15 @@ function CountColor() {
       count++;
     }
   }
-  document.body.innerHTML += `<div> Количество ячеек = ${count},red=${r},green=${g},yellow=${y}, white${count-r-g-y} <br> 
-  процент красных ${r/count*100}, процент зеленых ${g/count*100}, процент желтых ${y/count*100}</div>`;
+  document.body.innerHTML += `<div> Количество ячеек = ${count},red=${r},green=${g},yellow=${y}, white${count -
+    r -
+    g -
+    y} <br> 
+  процент красных ${r / count * 100}, процент зеленых ${g /
+    count *
+    100}, процент желтых ${y / count * 100}</div>`;
 }
 
-tableGenerator(3, 5);
+tableGenerator(3, "Э");
 randomColor();
 CountColor();
