@@ -1,0 +1,27 @@
+.top {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid grey;
+}
+.del-button {
+  margin-left: auto;
+  height: 100px;
+  width: 30%;
+}
+.del-button button {
+  height: 100%;
+  width: 100%;
+  background: burlywood;
+}
+.buttons {
+  display: flex;
+  margin: 0 auto;
+}
+.buttons button {
+  margin: 20px;
+}
+.yellow {
+  background: yellow;
+}
