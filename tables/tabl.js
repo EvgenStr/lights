@@ -72,6 +72,6 @@ function CountColor() {
     100}, процент желтых ${y / count * 100}</div>`;
 }
 
-tableGenerator(3, "Э");
+tableGenerator(3, 5);
 randomColor();
 CountColor();

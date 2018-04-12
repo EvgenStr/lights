@@ -30,12 +30,17 @@ var next = document.querySelector(".next");
 next.onclick = function() {
   var chil = ul.children;
   var count = +document.querySelector("h1").innerHTML;
-  if (count < chil.length - 1) {
+  if (count < 0) {
+    chil[count + 1].classList.add("yellow");
+    document.querySelector("h1").innerHTML =
+      +document.querySelector("h1").innerHTML + 1;
+  } else if (count < chil.length - 1) {
     chil[count].classList.remove("yellow");
     chil[count + 1].classList.add("yellow");
     document.querySelector("h1").innerHTML =
       +document.querySelector("h1").innerHTML + 1;
   }
+
   console.log(chil, count);
 };
 
