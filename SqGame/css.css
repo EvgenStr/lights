@@ -1,0 +1,35 @@
+.circle{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rebeccapurple;
+    position: fixed;
+  
+
+
+}
+.animation{
+    transition-property: top, left;
+    transition-duration: 1s;  
+}
+
+#main {
+    transition-property: top, left;
+    /* transition-duration: 0.1s; */
+    width: 150px;
+    height: 150px;
+    border: 6px solid rosybrown;
+    position: fixed;
+}
+h1{
+    text-align: center;
+    vertical-align: middle;
+    justify-items: center;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;  
+     
+}
