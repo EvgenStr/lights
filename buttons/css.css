@@ -25,3 +25,18 @@
 .yellow {
   background: yellow;
 }
+li::after {
+  opacity: 1;
+  content: "+";
+  position: absolute;
+  transform: rotate(25deg);
+}
+li{
+  opacity: 1;
+}
+
+.hide {
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: 0;
+}
