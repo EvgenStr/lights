@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
+</head>
+
+<body>
+    <form >
+        <p>Выберите дату прибытия:
+            <input class="arrival" type="date" name="calendar" value="2018-04-25" max="2018-05-29" min="2018-04-25">
+            <!-- <input type="submit" value="Отправить"> -->
+        </p>
+    </form>
+    <form >
+        <p>Выберите дату отбытия:
+            <input class="departure" type="date" name="calendar" value="2018-04-25" max="2018-05-29" min="2018-04-25">
+            <!-- <input type="submit" value="Отправить"> -->
+        </p>
+    </form>
+
+    <div class="choise">
+        <div>
+            Выберите количество людей
+            <br>
+            <select id="people">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="numberChildren">
+            Выберите количество детей
+            <br>
+            <select id="children">
+                <option>0</option>
+
+            </select>
+        </div>
+
+        <div class="age">
+            Выберите возраст детей
+            <br>
+            <div class="select_children">
+
+            </div>
+        </div>
+
+    </div>
+
+    <button id="form_order">Сформировать заказ</button>
+    <div id="order-div"></div>
+</body>
+
+</html>

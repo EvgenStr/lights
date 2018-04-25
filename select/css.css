@@ -1,0 +1,13 @@
+.age{
+    display: none;
+}
+
+.children-age{
+    display: block;
+}
+.choise{
+    display: flex;
+}
+.select_children{
+    display: block;
+}
