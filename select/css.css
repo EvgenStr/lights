@@ -7,7 +7,20 @@
 }
 .choise{
     display: flex;
+    border: 1px solid palegreen;
 }
 .select_children{
     display: block;
+}
+.rooms{
+    border: 1px solid palevioletred;
+}
+
+.room-2{
+    display: none;
+    border: 1px solid rgb(2, 58, 30);
+}
+.room-3{
+    display: none;
+    border: 1px solid rgba(224, 221, 15, 0.788);
 }

@@ -26,16 +26,16 @@ childrenChoiseAge.addEventListener("input", function(e) {
   var c_value = e.target.value;
   var div_children = document.querySelector(".age");
   var select_children = document.querySelector(".select_children");
-  if (c_value ) {
+  if (c_value) {
     div_children.style.display = "block";
     if (select_children.children.length > 0) {
-        select_children.innerHTML="";
+      select_children.innerHTML = "";
       var delete_ch = select_children.children;
       var len = delete_ch.length;
       for (var i = len - 1; i >= 0; i--) {
         select_children.removeChild(delete_ch[i]);
       }
-    debugger;
+      // debugger;
     }
     select_children.innerHTML = ``;
     for (var i = 0; i < c_value; i++) {
@@ -55,6 +55,21 @@ function appendSelect(par) {
   }
 }
 
+var room_option = document.getElementById("room-option");
+room_option.addEventListener("input", function(e) {
+  var r_value = e.target.value;
+  var r_div = document.querySelector(".rooms").children;
+  if (r_value > 1) {
+    r_div[2].style.display = "none";
+    for (var i = 1; i < r_value; i++) {
+      r_div[i].style.display = "block";
+    }
+  } else {
+    r_div[1].style.display = "none";
+    r_div[2].style.display = "none";
+  }
+});
+
 orderButton.addEventListener("click", function() {
   var orderDiv = document.getElementById("order-div");
   var arr = document.querySelector(".arrival");
@@ -67,12 +82,13 @@ orderButton.addEventListener("click", function() {
   orderDiv.innerHTML += `Дата прибытия : ${arr.value} <br>`;
   orderDiv.innerHTML += `Дата отбытия : ${dep.value} <br>`;
   orderDiv.innerHTML += `Количество людей : ${num.value} <br>`;
-  if(child.value){
+  if (child.value) {
     orderDiv.innerHTML += `Количество детей : ${child.value} <br>`;
     var len = child_age.length;
-    for(var i=0;i<len;i++ ){
-        orderDiv.innerHTML += `Возраст ребенка ${i+1} : ${child_age[i].value} <br>`;
+    for (var i = 0; i < len; i++) {
+      orderDiv.innerHTML += `Возраст ребенка ${i + 1} : ${
+        child_age[i].value
+      } <br>`;
     }
-
- }
+  }
 });
