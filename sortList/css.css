@@ -1,0 +1,138 @@
+div {
+    font-size: 18px;
+  }
+  .arrows {
+    position: relative;
+    cursor: pointer;
+  }
+  #name-button {
+    display: none;
+  }
+  #name-button + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid green;
+    border-width: 12px 7px;
+  }
+  #name-button:checked + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #name-button + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #name-button:checked + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid green;
+    border-width: 12px 7px;
+  }
+/* +++++++ */
+  #last-button {
+    display: none;
+  }
+  #last-button + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid green;
+    border-width: 12px 7px;
+  }
+  #last-button:checked + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #last-button + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #last-button:checked + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid green;
+    border-width: 12px 7px;
+  }
+  /* +++++++++++ */
+  #year-button {
+    display: none;
+  }
+  #year-button + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid green;
+    border-width: 12px 7px;
+  }
+  #year-button:checked + .arrows:after {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: -16px;
+    border: 10px solid transparent;
+    border-top: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #year-button + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid gray;
+    border-width: 12px 7px;
+  }
+  #year-button:checked + .arrows:before {
+    content: ' ';
+    position: absolute;
+    left: 10px;
+    bottom: 12px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid green;
+    border-width: 12px 7px;
+  }
+
+/* ++++++++++++++++++ */
+  .main{
+      display: flex;
+  }
+  .main div{
+    width: 250px;
+    border: 2px solid goldenrod;
+}
+li{
+    list-style: none;
+}
