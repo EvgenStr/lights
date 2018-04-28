@@ -42,7 +42,7 @@ var CountY = 0;
 var CountL = 0;
 
 function addElements() {
-  for (var i = 0; i < 14; i++) {
+  for (var i = 0; i < 15; i++) {
     nameListUl.innerHTML += `<li>${nameListArr[i].name}</li>`;
     lastListUl.innerHTML += `<li>${nameListArr[i].lastname}</li>`;
     oldListUl.innerHTML += `<li>${nameListArr[i].old}</li>`;
@@ -64,6 +64,13 @@ function sortLastBtoA(a, b) {
   return a.lastname > b.lastname ? -1 : a.lastname < b.lastname ? 1 : 0;
 }
 
+function sortAgeAtoB(personA, personB) {
+  return personA.old - personB.old;
+}
+function sortAgeBtoA(personA, personB) {
+  return personB.old - personA.old;
+}
+
 nameClickSort.addEventListener("click", function() {
   nameListUl.innerHTML = "";
   lastListUl.innerHTML = "";
@@ -71,33 +78,89 @@ nameClickSort.addEventListener("click", function() {
   if (CountN % 2 != 1) {
     nameListArr.sort(sortNameAtoB);
     CountN++;
-    debugger;
+    // debugger;
   } else {
     nameListArr.sort(sortNameBtoA);
     CountN--;
   }
   addElements();
-  debugger;
+  // debugger;
 });
 
-lastClickSort.addEventListener("click", function() {
+lastClickSort.addEventListener("change", function(e) {
   nameListUl.innerHTML = "";
   lastListUl.innerHTML = "";
   oldListUl.innerHTML = "";
   if (CountL % 2 != 1) {
     nameListArr.sort(sortLastAtoB);
     CountL++;
-    debugger;
+    lastClickSort.checked = false;
+    // debugger;
   } else {
     nameListArr.sort(sortLastBtoA);
     CountL--;
-    debugger;
+    lastClickSort.checked = true;
+    // debugger;
   }
   addElements();
-  debugger;
+  // debugger;
+  // e.preventDefault()
+});
+
+yearClickSort.addEventListener("change", function(e) {
+  nameListUl.innerHTML = "";
+  lastListUl.innerHTML = "";
+  oldListUl.innerHTML = "";
+  if (CountY % 2 != 1) {
+    nameListArr.sort(sortAgeAtoB);
+    CountY++;
+    // debugger;
+  } else {
+    nameListArr.sort(sortAgeBtoA);
+    CountY--;
+    // debugger;
+  }
+  addElements();
+  // debugger;
+  // e.preventDefault()
 });
 
 
 // $('#stateInput').change(function() {
 //   console.log('This value is now: ' + $(this).prop('checked'));
 // })
+
+// проблемный код
+
+// nameClickSort.addEventListener("click", function() {
+//   nameListUl.innerHTML = "";
+//   lastListUl.innerHTML = "";
+//   oldListUl.innerHTML = "";
+//   if (CountN % 2 != 1) {
+//     nameListArr.sort(sortNameAtoB);
+//     CountN++;
+//     debugger;
+//   } else {
+//     nameListArr.sort(sortNameBtoA);
+//     CountN--;
+//   }
+//   addElements();
+//   debugger;
+// });
+
+// lastClickSort.addEventListener("click", function() {
+//   nameListUl.innerHTML = "";
+//   lastListUl.innerHTML = "";
+//   oldListUl.innerHTML = "";
+//   if (CountL % 2 != 1) {
+//     nameListArr.sort(sortLastAtoB);
+//     CountL++;
+//     debugger;
+//   } else {
+//     nameListArr.sort(sortLastBtoA);
+//     CountL--;
+//     debugger;
+//   }
+//   addElements();
+//   debugger;
+// });
