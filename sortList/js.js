@@ -35,8 +35,8 @@ var nameListUl = document.getElementById("name-ul");
 var lastListUl = document.getElementById("last-ul");
 var oldListUl = document.getElementById("old-ul");
 var nameClickSort = document.getElementById("name-button");
-var lastClickSort = document.getElementById("last-name-tools");
-var yearClickSort = document.getElementById("year-old-tools");
+var lastClickSort = document.getElementById("last-button");
+var yearClickSort = document.getElementById("year-button");
 var CountN = 0;
 var CountY = 0;
 var CountL = 0;
@@ -75,32 +75,22 @@ nameClickSort.addEventListener("click", function() {
   nameListUl.innerHTML = "";
   lastListUl.innerHTML = "";
   oldListUl.innerHTML = "";
-  if (CountN % 2 != 1) {
+  if (document.getElementById("name-button").checked) {
     nameListArr.sort(sortNameAtoB);
-    CountN++;
-    // debugger;
   } else {
     nameListArr.sort(sortNameBtoA);
-    CountN--;
   }
   addElements();
-  // debugger;
 });
 
 lastClickSort.addEventListener("change", function(e) {
   nameListUl.innerHTML = "";
   lastListUl.innerHTML = "";
   oldListUl.innerHTML = "";
-  if (CountL % 2 != 1) {
+  if (document.getElementById("last-button").checked) {
     nameListArr.sort(sortLastAtoB);
-    CountL++;
-    lastClickSort.checked = false;
-    // debugger;
   } else {
     nameListArr.sort(sortLastBtoA);
-    CountL--;
-    lastClickSort.checked = true;
-    // debugger;
   }
   addElements();
   // debugger;
@@ -111,14 +101,10 @@ yearClickSort.addEventListener("change", function(e) {
   nameListUl.innerHTML = "";
   lastListUl.innerHTML = "";
   oldListUl.innerHTML = "";
-  if (CountY % 2 != 1) {
+  if (document.getElementById("year-button").checked) {
     nameListArr.sort(sortAgeAtoB);
-    CountY++;
-    // debugger;
   } else {
     nameListArr.sort(sortAgeBtoA);
-    CountY--;
-    // debugger;
   }
   addElements();
   // debugger;
