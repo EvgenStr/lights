@@ -31,15 +31,12 @@ var nameListArr = [
   name14,
   name15
 ];
-var nameListUl = document.getElementById("name-ul");
-var lastListUl = document.getElementById("last-ul");
-var oldListUl = document.getElementById("old-ul");
+var nameListUl = document.body.querySelector(".name-ul");
+var lastListUl = document.body.querySelector(".last-ul");
+var oldListUl = document.body.querySelector(".old-ul");
 var nameClickSort = document.getElementById("name-button");
 var lastClickSort = document.getElementById("last-button");
 var yearClickSort = document.getElementById("year-button");
-var CountN = 0;
-var CountY = 0;
-var CountL = 0;
 
 function addElements() {
   for (var i = 0; i < 15; i++) {
